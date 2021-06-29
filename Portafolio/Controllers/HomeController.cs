@@ -77,11 +77,11 @@ namespace Portafolio.Controllers
                 MailMessage _MailMessage = new MailMessage();
 
                 //Agregamos al remitente
-                string Transporte = "softwaredevelopment992@gmail.com";
+                string Transporte = "";
                 _MailMessage.From = new MailAddress(Transporte);
 
                 //Estructura del correo
-                string Destinatario = "alex.d4556@gmail.com";
+                string Destinatario = "";
                 string CuerpoEmail = string.Format("<b>{0}</b>", Mensaje);
 
                 _MailMessage.CC.Add(Destinatario);
@@ -94,7 +94,7 @@ namespace Portafolio.Controllers
 
                 //Credenciales para enviar por SMTP seguro (Cuando el servidor lo exige)
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential(Transporte, "adminnegocio2021");
+                smtpClient.Credentials = new NetworkCredential(Transporte, "");
 
                 smtpClient.EnableSsl = true;
                 smtpClient.Send(_MailMessage);
