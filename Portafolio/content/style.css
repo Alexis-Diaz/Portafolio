@@ -1,0 +1,149 @@
+﻿.barraNavegacion {
+    padding-top:5px;
+    padding-left:15px; 
+    padding-right:15px;
+}
+
+.sizeFoto {
+    width:50px;
+    height:50px;
+}
+
+.ziseFotoModal {
+    width: 360px;
+    height:360px;
+}
+
+.nombreNavegacion {
+    margin-left: 60px;
+}
+.headerContainer{
+    /*background-image:url("../public/img/fondoCeleste.jpg");*/
+    background-repeat:repeat-x;
+    padding-top:10px;
+    position:absolute;
+    margin-left:20%;
+    width:60%;
+    height:300px;
+  /*  padding-bottom:150px;*/
+
+}
+
+/*Diseño reponsivo para la imagen de portada*/
+@media only screen and (max-width:500){
+    .headerContainer{
+        margin-left: 2%;
+    }
+}
+
+#headerName {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(57, 61, 64);
+    font-size: 30px;
+    text-align: center;
+    display: none;
+    width: 53%;
+    padding: 7px;
+}
+
+#headerDescription, #headerDescription1 {
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+    color:rgb(4, 43, 47);
+    text-align:center;
+    display:none;
+    width:100%;
+}
+/*medidas para telefonos*/
+/*El orden en que se escriben los media importa*/
+/*Responsive para las letras de portada*/
+@media only screen and (max-width:800px) {
+    #headerTex {
+        box-sizing:border-box;
+        width: 60%;
+        padding: 0;
+        /*background-color: aquamarine;*/
+    }
+}
+
+@media only screen and (max-width:660px) {
+    #headerTex {
+        box-sizing: border-box;
+        width: 50%;
+        padding-right: 20px;
+        /*background-color:brown;*/
+    }
+}
+
+@media only screen and (max-width:610px) {
+    #headerTex {
+        box-sizing:border-box;
+        width: 53%;
+        padding-right: 15px;
+       /* background-color: blue;*/
+    }
+}
+
+/*Para ubicar las tarjetas*/
+.containerCuadriculas {
+    margin-bottom: 400px;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.cuadriculaTarjeta {
+    float: left;
+    box-sizing: border-box;
+    width: 33.33%;
+}
+
+/*medidas para diferentes pantallas*/
+/*El orden en que se escriben los media importa*/
+/*Para dar estilo a las tres tarjetas de la pantalla de inicio*/
+@media only screen and (min-width:901px) {
+
+    .containerCuadriculas {
+        margin-bottom: 600px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .cuadriculaTarjeta {
+        width: 100%;
+    }
+
+    .containerCuadriculas {
+        margin-bottom: 1000px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .cuadriculaTarjeta {
+        width: 100%;
+    }
+    .containerCuadriculas {
+        margin-bottom: 1100px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .cuadriculaTarjeta {
+        width: 100%;
+    }
+    .containerCuadriculas {
+        margin-bottom: 1200px;
+    }
+}
+
+/*Tamaño de los logos de redes sociales*/
+img.sizeIconos {
+    width: 30px;
+    height: 30px;
+}
+
+/*Tamaño de label imagen del parallax*/
+.sizeParallax {
+    height:200px;
+}

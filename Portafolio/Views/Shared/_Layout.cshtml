@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/content/materialize/css/materialize.css" />
+    <link rel="stylesheet" href="~/content/style.css" />
+
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+</head>
+<body>
+    <!--Estructura del navbar-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="barraNavegacion nav-wrapper  cyan darken-4">
+                <a href="#avatarUser" data-target="avatarUser" class="brand-logo modal-trigger"><img src="~/public/img/FotoPerfil.jpg" class="circle responsive-img sizeFoto" /></a>
+                <strong class="nombreNavegacion">Alexis Díaz</strong>
+                @*<a class="brand-logo"><img src="~/public/20201213_145040 modificada.jpg" class="materialboxed circle sizeFoto" data-caption="Foto de perfil"/></a>*@
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="~/home">Inicio</a></li>
+                    <li><a href="~/home/proyectos">Proyectos</a></li>
+                    <li><a href="~/home/about">Sobre mí</a></li>
+                    <li><a href="~/home/contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--Estructura del modal-->
+    <div class="modal cyan darken-4" id="avatarUser" style="width: 360px; padding: 0">
+        <img src="~/public/img/FotoPerfil.jpg" class="ziseFotoModal" />
+        @*<div class="modal-content center" style="border:solid 1px black; padding:0">
+            </div>*@
+        <div class="fixed-action-btn">
+            <div style="padding-right:10px"><a class="modal-close btn-floating btn-large red"><i class="material-icons">close</i></a></div>
+        </div>
+    </div>
+
+    <!--Menu oculto-->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="~/home">Inicio</a></li>
+        <li><a href="~/home/proyectos">Proyectos</a></li>
+        <li><a href="~/home/about">Sobre mí</a></li>
+        <li><a href="~/home/contact">Contacto</a></li>
+    </ul>
+
+
+
+    <div>
+        @RenderBody()
+        <hr />
+        <!--Estructura del pie de pagina-->
+        <footer class="page-footer cyan darken-3 container">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Escríbeme</h5>
+                        <p class="grey-text text-lighten-4">
+                            Gracias por visitar mi portafolio web, si deseas ponerte en contacto
+                            conmigo puedes hacerlo en la sección <q>Contacto</q>, o pulsando <a href="~/home/contact" class="light-blue-text text-lighten-3">aquí</a>.
+                        </p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Redes sociales</h5>
+                        <ul>
+                            <li style="height:35px"><img src="~/public/iconos/iconosWhatsApp.png" class="sizeIconos" /><a style="position:absolute; padding:5px 0 5px 3px" class="grey-text text-lighten-3" href="https://web.whatsapp.com/">WhatsApp 7019 5941</a></li>
+                            <li style="height:35px"><img src="~/public/iconos/iconosFacebook.png" class="sizeIconos" /><a style="position:absolute; padding:5px 0 5px 3px" class="grey-text text-lighten-3" href="https://www.facebook.com/alexis.diaz.15/">Facebook</a></li>
+                            <li style="height:35px"><img src="~/public/iconos/iconosLinkeInd.png" class="sizeIconos" /><a style="position:absolute; padding:5px 0 5px 3px" class="grey-text text-lighten-3" href="https://www.linkedin.com/in/osmín-alexis-díaz-lue-68a1881b8">LinkeInd</a></li>
+                            <li style="height:35px"><img src="~/public/iconos/iconosCorreoElectronico.png" class="sizeIconos" /><a style="position:absolute; padding:5px 0 5px 3px" class="grey-text text-lighten-3" href="https://mail.google.com">alex.d4556@gmail.com</a></li>
+
+                        </ul>
+                        <h5 class="white-text">Enlaces a</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="~/home/proyectos">Proyectos</a></li>
+                            <li><a class="grey-text text-lighten-3" href="~/home/about">Sobre mí</a></li>
+                            <li><a class="grey-text text-lighten-3" href="~/home/contact">Contacto</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <p>&copy; @DateTime.Now.Year - Portafolio web</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/materialize/materialize.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/Animaciones.js"></script>
+</body>
+</html>
