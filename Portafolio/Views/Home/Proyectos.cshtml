@@ -2,29 +2,64 @@
 @{
     ViewBag.Title = "Proyectos";
 }
-
 <div class="container">
     <h2>Proyectos</h2>
-
     <div class="row">
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="~/public/img/HotelMyre.jpg">
+        <div class="col s12 m6">
+            <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="~/public/img/myre.jpg">
                 </div>
                 <div class="card-content">
-                    <span class="card-title black-text text-accent-1">Sistema de reservación para Hoteles</span>
-                    <p>
-                        MYRE son las iniciales de Mark Your Reservation. MYRE es una aplicación
-                        web que sirve para administrar las operaciones de un hotel a la vez que sirve
-                        para que los clientes puedan realizar reservas en linea.
-                    </p>
+                    <span class="card-title activator black-text text-accent-1" style="font-size: 1.5em">Sistema de reservación para Hoteles<i class="material-icons right">more_vert</i></span>
                 </div>
                 <div class="card-action">
-                    <a href="#">Visitar sitio</a>
+                    <a href="http://myre.somee.com/" target="_blank">Visitar sitio</a>
+                    <a href="https://github.com/Alexis-Diaz/Sistema-Hotelero.git" target="_blank">Ver código</a>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Sistema de reservación para Hoteles<i class="material-icons right">close</i></span>
+                    <p>
+                        MYRE son las iniciales de Mark Your Reservation (Marca Tu Reservación). MYRE es una aplicación
+                        web (actualmente en desarrollo) que sirve para administrar las operaciones de un hotel, ayuda a administrar las habitaciones
+                        y llevar un control de consumos por cliente, incluye además la generación de una factura.<br />
+                        Si deseas visitarlo para ver su funcionamiento, puedes utilizar estas credenciales:<br />
+                        Usuario: Admin14  Password: admin123<br />
+                        <b>Tecnologías utilizadas</b><br /><br />
+                        El sitio se creo en ASP.NET con el patrón de arquitectura MVC programado por capas. El lenguaje de
+                        progrmación es C#. Para la apariencia se utilizó el framework de CSS Materialize, Javascript y JQuery. Para acceder a la base
+                        de datos se utiliza el ORM EntityFramework Code First, y el SGBD es SQL-Server.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="~/public/img/portafolio.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator black-text text-accent-1" style="font-size: 1.5em">Portafolio<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/Alexis-Diaz/Portafolio.git" target="_blank">Ver código</a>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Portafolio<i class="material-icons right">close</i></span>
+                    <p>
+                        El portafolio que actualmente visita forma parte de los proyectos efectuados. Aunque parece sencillo
+                        ha sido creado con mucha pasión y cariño &#x1F60A;.<br /><br />
+                        <b>Tecnologías utilizadas</b><br />
+                        El sitio se creo en ASP.NET con el patrón de arquitectura MVC. Para la apariencia
+                        se utilizó el framework de CSS Materialize, Javascript y JQuery. Utiliza además servicio de
+                        mensajería.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    <br /> <br /> <br /> <br />  <br /> <br />
+    <span style="padding-left:7px; font-size:1.2em; color: rgb(13 12 12)">Siempre habrá más que mostrar...</span>
+    <br /> <br />  <br /> <br />
 </div>
 
