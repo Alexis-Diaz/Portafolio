@@ -177,3 +177,50 @@ img.sizeIconos {
     top: 100px;
     border-radius:20%;
 }
+
+.container-picture, .picture-vertical, picture-horizontal {
+   box-sizing:border-box;
+}
+
+.picture-vertical{
+    float:left;
+    padding:3px;
+    width:33.33%;
+   
+}
+.picture-horizontal{
+    float: left;
+    padding: 3px;
+    width: 50%;
+    margin-bottom:30px;
+}
+
+.pic {
+    width:100%;
+}
+
+#pic1{
+    -ms-transform:rotate(-4deg);
+    transform:rotate(-4deg);
+}
+
+#pic2 {
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+#pic3{
+    -ms-transform:rotate(8deg);
+    transform:rotate(8deg);   
+}
+
+#pic4{
+    -ms-transform:rotate(-8deg);
+    transform:rotate(-8deg);
+}
+
+#pic5{
+    -ms-transform:rotate(10deg);
+    transform:rotate(10deg);
+}
+
