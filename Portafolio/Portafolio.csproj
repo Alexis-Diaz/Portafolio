@@ -183,6 +183,7 @@
     <Content Include="content\materialize\fonts\roboto\Roboto-Bold.eot" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="public\iconos\icon.png" />
+    <Content Include="public\img\myre.jpg" />
     <Content Include="public\img\FotoPerfil.jpg" />
     <Content Include="public\img\computerCoffe.jpg" />
     <Content Include="public\img\fondoCeleste.jpg" />
@@ -194,6 +195,7 @@
     <Content Include="public\iconos\iconosWhatsApp.png" />
     <Content Include="public\img\HotelMyre.jpg" />
     <Content Include="public\img\paisajeVerde1.jpg" />
+    <Content Include="public\img\portafolio.jpg" />
     <Content Include="Scripts\Animaciones.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
