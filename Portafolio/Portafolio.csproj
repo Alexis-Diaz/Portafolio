@@ -196,6 +196,11 @@
     <Content Include="public\iconos\iconosWhatsApp.png" />
     <Content Include="public\img\HotelMyre.jpg" />
     <Content Include="public\img\paisajeVerde1.jpg" />
+    <Content Include="public\img\picture1.jpg" />
+    <Content Include="public\img\picture2.jpg" />
+    <Content Include="public\img\picture3.jpg" />
+    <Content Include="public\img\picture4.jpg" />
+    <Content Include="public\img\picture5.jpg" />
     <Content Include="public\img\portafolio.jpg" />
     <Content Include="Scripts\Animaciones.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
