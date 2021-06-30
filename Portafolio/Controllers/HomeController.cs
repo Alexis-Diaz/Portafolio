@@ -12,6 +12,7 @@ namespace Portafolio.Controllers
 {
     public class HomeController : Controller
     {
+        Env env = new Env();
         public ActionResult Index()
         {
             return View();
@@ -75,13 +76,14 @@ namespace Portafolio.Controllers
             {
                 //instanciamos la clase MailMessage
                 MailMessage _MailMessage = new MailMessage();
+                
 
                 //Agregamos al remitente
-                string Transporte = "";
+                string Transporte = env.transport;
                 _MailMessage.From = new MailAddress(Transporte);
 
                 //Estructura del correo
-                string Destinatario = "";
+                string Destinatario = env.destinatario;
                 string CuerpoEmail = string.Format("<b>{0}</b>", Mensaje);
 
                 _MailMessage.CC.Add(Destinatario);
@@ -94,7 +96,7 @@ namespace Portafolio.Controllers
 
                 //Credenciales para enviar por SMTP seguro (Cuando el servidor lo exige)
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential(Transporte, "");
+                smtpClient.Credentials = new NetworkCredential(Transporte, env.password);
 
                 smtpClient.EnableSsl = true;
                 smtpClient.Send(_MailMessage);

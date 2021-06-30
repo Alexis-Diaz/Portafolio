@@ -29,6 +29,7 @@
 
 }
 
+
 /*Diseño reponsivo para la imagen de portada*/
 @media only screen and (max-width:500){
     .headerContainer{
@@ -40,6 +41,7 @@
     position: relative;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(57, 61, 64);
+    text-shadow: 3px 3px 5px white;
     font-size: 30px;
     text-align: center;
     display: none;
@@ -51,7 +53,8 @@
     position: relative;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:30px;
-    color:rgb(4, 43, 47);
+    color:rgb(255 255 255);
+    text-shadow: 3px 3px 6px black;
     text-align:center;
     display:none;
     width:100%;
