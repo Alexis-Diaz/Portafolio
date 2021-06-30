@@ -89,6 +89,16 @@
     }
 }
 
+@media only screen and (max-width:560px) {
+    #headerName {
+        text-align:center;
+        position:initial;
+        width:90%;
+        margin:auto;
+        /* background-color: blue;*/
+    }
+}
+
 /*Para ubicar las tarjetas*/
 .containerCuadriculas {
     margin-bottom: 400px;
