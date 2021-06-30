@@ -183,6 +183,7 @@
     <Content Include="content\materialize\fonts\roboto\Roboto-Bold.eot" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="public\iconos\icon.png" />
+    <Content Include="public\img\foto.jpg" />
     <Content Include="public\img\myre.jpg" />
     <Content Include="public\img\FotoPerfil.jpg" />
     <Content Include="public\img\computerCoffe.jpg" />
