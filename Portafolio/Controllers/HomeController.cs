@@ -7,12 +7,13 @@ using System.Web.Mvc;
 using System.Net;
 using System.Net.Mail;
 using Portafolio.Models;
+using Portafolio.Env;
 
 namespace Portafolio.Controllers
 {
     public class HomeController : Controller
     {
-        Env.Env env = new Env.Env();
+        Credenciales env = new Credenciales();
         public ActionResult Index()
         {
             return View();
