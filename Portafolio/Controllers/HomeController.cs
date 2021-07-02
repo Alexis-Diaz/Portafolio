@@ -12,7 +12,7 @@ namespace Portafolio.Controllers
 {
     public class HomeController : Controller
     {
-        Env env = new Env();
+        Env.Env env = new Env.Env();
         public ActionResult Index()
         {
             return View();
