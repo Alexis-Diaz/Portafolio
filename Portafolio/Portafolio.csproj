@@ -121,7 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Env\Env.cs" />
+    <Compile Include="Env\Credenciales.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,25 +183,31 @@
     <Content Include="content\materialize\fonts\roboto\Roboto-Bold.eot" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="public\iconos\icon.png" />
+    <Content Include="public\img\computerCoffe_opt.jpg" />
+    <Content Include="public\img\fondoVerde_opt.jpg" />
     <Content Include="public\img\foto.jpg" />
+    <Content Include="public\img\FotoPerfil_opt.jpg" />
+    <Content Include="public\img\foto_opt.jpg" />
     <Content Include="public\img\myre.jpg" />
-    <Content Include="public\img\FotoPerfil.jpg" />
     <Content Include="public\img\computerCoffe.jpg" />
-    <Content Include="public\img\fondoCeleste.jpg" />
-    <Content Include="public\img\fondoGeometricoAzul.jpg" />
     <Content Include="public\img\fondoVerde.jpg" />
     <Content Include="public\iconos\iconosCorreoElectronico.png" />
     <Content Include="public\iconos\iconosFacebook.png" />
     <Content Include="public\iconos\iconosLinkeInd.png" />
     <Content Include="public\iconos\iconosWhatsApp.png" />
-    <Content Include="public\img\HotelMyre.jpg" />
-    <Content Include="public\img\paisajeVerde1.jpg" />
+    <Content Include="public\img\myre_opt.jpg" />
     <Content Include="public\img\picture1.jpg" />
+    <Content Include="public\img\picture1_opt.jpg" />
     <Content Include="public\img\picture2.jpg" />
+    <Content Include="public\img\picture2_opt.jpg" />
     <Content Include="public\img\picture3.jpg" />
+    <Content Include="public\img\picture3_opt.jpg" />
     <Content Include="public\img\picture4.jpg" />
+    <Content Include="public\img\picture4_opt.jpg" />
     <Content Include="public\img\picture5.jpg" />
+    <Content Include="public\img\picture5_opt.jpg" />
     <Content Include="public\img\portafolio.jpg" />
+    <Content Include="public\img\portafolio_opt.jpg" />
     <Content Include="Scripts\Animaciones.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

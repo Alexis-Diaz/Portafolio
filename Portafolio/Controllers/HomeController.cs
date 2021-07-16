@@ -7,12 +7,13 @@ using System.Web.Mvc;
 using System.Net;
 using System.Net.Mail;
 using Portafolio.Models;
+using Portafolio.Env;
 
 namespace Portafolio.Controllers
 {
     public class HomeController : Controller
     {
-        Env.Env env = new Env.Env();
+        Credenciales env = new Credenciales();
         public ActionResult Index()
         {
             return View();
@@ -96,7 +97,7 @@ namespace Portafolio.Controllers
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential(Transporte, env.password);
 
-                smtpClient.EnableSsl = true;
+                smtpClient.EnableSsl = false;//especifica si se usara una ruta ssl
                 smtpClient.Send(_MailMessage);
                 return true;
             }
