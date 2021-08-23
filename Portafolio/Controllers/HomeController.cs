@@ -53,15 +53,16 @@ namespace Portafolio.Controllers
                 string Remitente = email.EmisorEmail;
                 string Asunto = email.Asunto;
                 string Mensaje = email.Mensaje;
-
-                if (SendMail(Remitente, Asunto, Mensaje) == true)
+                string m = SendMail(Remitente, Asunto, Mensaje);
+                if (m == "")
                 {
                     return RedirectToAction("Contact", "Home", new { e = 1});//Se pasa como parametro de url la e
                                                                              //el 1 indica exito
                 }
                 else
                 {
-                    return RedirectToAction("Contact", "Home", new { e = 2 });//Se pasa como parametro de url la e
+                    TempData["Error"] = m;
+                    return RedirectToAction("Contact", "Home", new { e = 2});//Se pasa como parametro de url la e
                 }                                                             //el 2 indica fracaso
                 
             }
@@ -69,7 +70,7 @@ namespace Portafolio.Controllers
             return View(email);
         }
 
-        public bool SendMail(string Remitente, string Asunto, string Mensaje)
+        public string SendMail(string Remitente, string Asunto, string Mensaje)
         {
             try
             {
@@ -97,13 +98,13 @@ namespace Portafolio.Controllers
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential(Transporte, env.password);
 
-                smtpClient.EnableSsl = false;//especifica si se usara una ruta ssl
+                smtpClient.EnableSsl = true;//especifica si se usara una ruta ssl
                 smtpClient.Send(_MailMessage);
-                return true;
+                return "";
             }
             catch (Exception ex)
             {
-                return false;
+                return ex.Message;
             }
 
         }
