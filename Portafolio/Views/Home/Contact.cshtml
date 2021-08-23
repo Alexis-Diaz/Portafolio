@@ -8,47 +8,48 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="container">
-        <h2>¡Gracias por visitar la página!</h2>
-        <h4>Escríbe desde aquí!!!</h4>
-        <p>Para mí será un placer que me contactes, trataré de responder en la brevedad posible.</p>
-        <br />
-        <br />
-        @if (ViewBag.Message == "1")
-        {
-            <div style="padding:3px" class="green lighten-5 green-text text-darken-4">El mensaje fué enviado.</div>
-        }
-        else if (ViewBag.Message == "2")
-        {
-            <div style="padding:3px" class="orange lighten-5 orange-text text-darken-4">Disculpa por los inconvenientes, parece que ocurrió un error. Por favor, vuelve a intentarlo. Si el error persiste puedes contactarme con un método alternativo, trataré de solucionar en la brevedad este inconveniente.</div>
-        }
+<div class="container">
+    <h2>¡Gracias por visitar la página!</h2>
+    <h4>Escríbe desde aquí!!!</h4>
+    <p>Para mí será un placer que me contactes, trataré de responder en la brevedad posible.</p>
+    <br />
+    <br />
+    @if (ViewBag.Message == "1")
+    {
+        <div style="padding:3px" class="green lighten-5 green-text text-darken-4">El mensaje fué enviado.</div>
+    }
+    else if (ViewBag.Message == "2")
+    {
+        <div style="padding:3px" class="orange lighten-5 orange-text text-darken-4">Disculpa por los inconvenientes, parece que ocurrió un error. Por favor, vuelve a intentarlo. Si el error persiste puedes contactarme con un método alternativo, trataré de solucionar en la brevedad este inconveniente.</div>
+        <div style="padding:3px" class="orange lighten-5 orange-text text-darken-4">Error: @TempData["Error"]</div>
+    }
 
-        <br />
-        @Html.ValidationSummary(true, "", new { @class = "red-text text-lighten-2" })
-        <div class="input-field">
-            @Html.LabelFor(model => model.EmisorEmail, htmlAttributes: new { @class = "control-label col-md-2" })
-            @Html.EditorFor(model => model.EmisorEmail, new { htmlAttributes = new { @class = "validate" } })
-            @Html.ValidationMessageFor(model => model.EmisorEmail, "", new { @class = "red-text text-lighten-2" })
-        </div>
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "red-text text-lighten-2" })
+    <div class="input-field">
+        @Html.LabelFor(model => model.EmisorEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.EditorFor(model => model.EmisorEmail, new { htmlAttributes = new { @class = "validate" } })
+        @Html.ValidationMessageFor(model => model.EmisorEmail, "", new { @class = "red-text text-lighten-2" })
+    </div>
 
-        <div class="input-field">
-            @Html.LabelFor(model => model.Asunto, htmlAttributes: new { @class = "control-label col-md-2" })
-            @Html.EditorFor(model => model.Asunto, new { htmlAttributes = new { @class = "validate" } })
-            @Html.ValidationMessageFor(model => model.Asunto, "", new { @class = "red-text text-lighten-2" })
-        </div>
+    <div class="input-field">
+        @Html.LabelFor(model => model.Asunto, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.EditorFor(model => model.Asunto, new { htmlAttributes = new { @class = "validate" } })
+        @Html.ValidationMessageFor(model => model.Asunto, "", new { @class = "red-text text-lighten-2" })
+    </div>
 
-        <div class="input-field">
-            @Html.LabelFor(model => model.Mensaje, htmlAttributes: new { @class = "control-label col-md-2" })
-            @Html.EditorFor(model => model.Mensaje, new { htmlAttributes = new { @class = "validate" } })
-            @Html.ValidationMessageFor(model => model.Mensaje, "", new { @class = "red-text text-lighten-2" })
-        </div>
+    <div class="input-field">
+        @Html.LabelFor(model => model.Mensaje, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.EditorFor(model => model.Mensaje, new { htmlAttributes = new { @class = "validate" } })
+        @Html.ValidationMessageFor(model => model.Mensaje, "", new { @class = "red-text text-lighten-2" })
+    </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Enviar" class="btn btn-block" />
-            </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Enviar" class="btn btn-block" />
         </div>
     </div>
+</div>
 }
 <br />
 <br />
