@@ -42,6 +42,7 @@ namespace Portafolio.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Contact(Email email)
         {
             if (ModelState.IsValid)
@@ -86,7 +87,8 @@ namespace Portafolio.Controllers
                 string Destinatario = env.destinatario;
                 string CuerpoEmail = string.Format("<b>{0}</b>", Mensaje);
 
-                _MailMessage.CC.Add(Destinatario);
+                _MailMessage.To.Add(Destinatario);//destinatario
+                //_MailMessage.CC.Add(Remitente);//con copia
                 _MailMessage.Subject = string.Format("Remitente <<{0}>> Asunto: {1}", Remitente, Asunto);
                 _MailMessage.IsBodyHtml = true;
                 _MailMessage.Body = CuerpoEmail;
@@ -96,9 +98,9 @@ namespace Portafolio.Controllers
 
                 //Credenciales para enviar por SMTP seguro (Cuando el servidor lo exige)
                 smtpClient.UseDefaultCredentials = false;
+                smtpClient.EnableSsl = true;//especifica si se usara una ruta ssl
                 smtpClient.Credentials = new NetworkCredential(Transporte, env.password);
 
-                smtpClient.EnableSsl = true;//especifica si se usara una ruta ssl
                 smtpClient.Send(_MailMessage);
                 return "";
             }
@@ -106,7 +108,6 @@ namespace Portafolio.Controllers
             {
                 return ex.Message;
             }
-
         }
     }
 }
