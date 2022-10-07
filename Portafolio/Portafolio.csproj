@@ -183,11 +183,14 @@
     <Content Include="content\materialize\fonts\roboto\Roboto-Bold.eot" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="public\iconos\icon.png" />
+    <Content Include="public\img\aprendoSite.jpg" />
+    <Content Include="public\img\aprendoSite_opt.jpg" />
     <Content Include="public\img\calculadora.jpg" />
     <Content Include="public\img\computerCoffe_opt.jpg" />
     <Content Include="public\img\cuestionarioWeb.jpg" />
     <Content Include="public\img\fondoVerde_opt.jpg" />
     <Content Include="public\img\foto.jpg" />
+    <Content Include="public\img\fotoHacienda.jpg" />
     <Content Include="public\img\FotoPerfil_opt.jpg" />
     <Content Include="public\img\foto_opt.jpg" />
     <Content Include="public\img\myre.jpg" />
